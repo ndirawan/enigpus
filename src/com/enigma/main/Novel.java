@@ -17,33 +17,29 @@ public class Novel extends Buku{
         this.writer = writer;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    @Override
+    String setAuthor(String newAuthor) {
+        return author = newAuthor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    @Override
+    Integer setYear(Integer newYear) {
+        return year = newYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
-    }
-
-    public void setCode(String code) {
-        this.code = code;
-    }
-
-    public String getWriter() {
-        return writer;
-    }
-
-    public void setWriter(String writer) {
-        this.writer = writer;
+    @Override
+    String setWriter(String newWriter) {
+        return writer = newWriter;
     }
 
     @Override
     String getTitle() {
         return title;
+    }
+
+    @Override
+    String setTitle(String newTitle) {
+        return title = newTitle;
     }
 
     @Override

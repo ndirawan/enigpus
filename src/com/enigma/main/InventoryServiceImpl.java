@@ -28,12 +28,32 @@ public class InventoryServiceImpl implements InventoryService{
     }
 
     @Override
-    public void updateBook(String code) {
-        Set<Buku> y = new HashSet<>();
+    public void getCode(String code) {
         for (Buku x : buku) {
-            if(x.getCode().equals(code)) y.add(x);
+            if(x.getCode().equals(code)) System.out.println(x);}
+    }
+
+    @Override
+    public void updateMagazine(String code, String title, String author, Integer year) {
+        for (Buku x : buku) {
+            if(x.getCode().equals(code)){
+                x.setTitle(title);
+                x.setAuthor(author);
+                x.setYear(year);
+            }
         }
-        System.out.println(y);
+    }
+
+    @Override
+    public void updateNovel(String code, String title, String author, Integer year, String writer) {
+        for (Buku x : buku) {
+            if(x.getCode().equals(code)){
+                x.setTitle(title);
+                x.setAuthor(author);
+                x.setWriter(writer);
+                x.setYear(year);
+            }
+;        }
     }
 
     @Override

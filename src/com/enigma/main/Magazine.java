@@ -15,20 +15,24 @@ public class Magazine extends Buku{
         this.code = code;
     }
 
-    public void setTitle(String title) {
-        this.title = title;
+    @Override
+    String setAuthor(String newAuthor) {
+        return author = newAuthor;
     }
 
-    public void setAuthor(String author) {
-        this.author = author;
+    @Override
+    Integer setYear(Integer newYear) {
+        return year = newYear;
     }
 
-    public void setYear(Integer year) {
-        this.year = year;
+    @Override
+    String setWriter(String newWriter) {
+        return null;
     }
 
-    public void setCode(String code) {
-        this.code = code;
+    @Override
+    String setTitle(String newTitle) {
+        return title = newTitle;
     }
 
     @Override
