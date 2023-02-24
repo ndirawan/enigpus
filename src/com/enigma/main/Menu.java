@@ -33,6 +33,7 @@ public class Menu {
                 break;
             case 5:
                 delete();
+                break;
             case 6:
                 System.exit(0);
                 break;
