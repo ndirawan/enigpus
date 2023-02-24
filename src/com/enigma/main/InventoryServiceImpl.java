@@ -21,8 +21,25 @@ public class InventoryServiceImpl implements InventoryService{
 
     @Override
     public void getAllBook() {
+        System.out.println(Constant.ALL_BOOKS);
         for (Buku all : buku) {
             System.out.println(all);
+        }
+    }
+
+    @Override
+    public void updateBook(String code) {
+        Set<Buku> y = new HashSet<>();
+        for (Buku x : buku) {
+            if(x.getCode().equals(code)) y.add(x);
+        }
+        System.out.println(y);
+    }
+
+    @Override
+    public void deleteBook(String code) {
+        for (Buku x : buku) {
+            if(x.getCode().equals(code)) buku.remove(x);
         }
     }
 
