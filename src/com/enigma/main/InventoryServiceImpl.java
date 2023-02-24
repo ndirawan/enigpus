@@ -5,16 +5,16 @@ import java.util.Set;
 
 public class InventoryServiceImpl implements InventoryService{
 
-    private Set<Buku> buku = new HashSet<>();
+    private Set<Book> book = new HashSet<>();
 
     @Override
-    public void addBook(Buku buku) {
-        this.buku.add(buku);
+    public void addBook(Book book) {
+        this.book.add(book);
     }
 
     @Override
     public void searchBook(String bookTitle) {
-        for (Buku x : buku) {
+        for (Book x : book) {
             if(x.getTitle().equals(bookTitle)) System.out.println(x);
         }
     }
@@ -22,20 +22,20 @@ public class InventoryServiceImpl implements InventoryService{
     @Override
     public void getAllBook() {
         System.out.println(Constant.ALL_BOOKS);
-        for (Buku all : buku) {
+        for (Book all : book) {
             System.out.println(all);
         }
     }
 
     @Override
     public void getCode(String code) {
-        for (Buku x : buku) {
+        for (Book x : book) {
             if(x.getCode().equals(code)) System.out.println(x);}
     }
 
     @Override
     public void updateMagazine(String code, String title, String author, Integer year) {
-        for (Buku x : buku) {
+        for (Book x : book) {
             if(x.getCode().equals(code)){
                 x.setTitle(title);
                 x.setAuthor(author);
@@ -46,7 +46,7 @@ public class InventoryServiceImpl implements InventoryService{
 
     @Override
     public void updateNovel(String code, String title, String author, Integer year, String writer) {
-        for (Buku x : buku) {
+        for (Book x : book) {
             if(x.getCode().equals(code)){
                 x.setTitle(title);
                 x.setAuthor(author);
@@ -58,15 +58,15 @@ public class InventoryServiceImpl implements InventoryService{
 
     @Override
     public void deleteBook(String code) {
-        for (Buku x : buku) {
-            if(x.getCode().equals(code)) buku.remove(x);
+        for (Book x : book) {
+            if(x.getCode().equals(code)) book.remove(x);
         }
     }
 
     @Override
     public String toString() {
         return "InventoryServiceImpl{" +
-                "buku=" + buku +
+                "buku=" + book +
                 '}';
     }
 }

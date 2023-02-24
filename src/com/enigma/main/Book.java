@@ -1,6 +1,6 @@
 package com.enigma.main;
 
-public abstract class Buku {
+public abstract class Book {
     abstract String getTitle();
     abstract String setTitle(String newTitle);
     abstract String getCode();

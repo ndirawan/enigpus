@@ -2,7 +2,7 @@ package com.enigma.main;
 
 import java.util.Objects;
 
-public class Magazine extends Buku{
+public class Magazine extends Book {
     private String title;
     private String author;
     private Integer year;
